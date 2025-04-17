@@ -8,7 +8,33 @@ const app = express();
 const cache = new NodeCache({ stdTTL: 300 }); // Cache for 5 minutes
 
 app.use(cors());
-app.use(express.static('.'));
+
+// Add security headers
+app.use((req, res, next) => {
+    // Prevent search engine indexing
+    res.setHeader('X-Robots-Tag', 'noindex,nofollow,noarchive');
+    
+    // Security headers
+    res.setHeader('X-Frame-Options', 'DENY');
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('X-XSS-Protection', '1; mode=block');
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+    
+    // CSP headers
+    res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:");
+    
+    next();
+});
+
+app.use(express.static('.', {
+    setHeaders: (res, path) => {
+        if (path.endsWith('.html')) {
+            res.setHeader('X-Robots-Tag', 'noindex,nofollow,noarchive');
+        }
+    }
+}));
 
 // Initialize Google Sheets document
 const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);

@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /
+Noindex: /
+
+# Block all HTML pages
+Disallow: /*.html$
+Disallow: /spectrum.html
+Disallow: /verizon.html
+Disallow: /at&t.html
+Disallow: /optimum.html
+Disallow: /t-mobile.html
+Disallow: /centurylink.html
+Disallow: /internet.html
+Disallow: /cableTv.html
+Disallow: /about.html
+Disallow: /contact.html
+Disallow: /service.html
+Disallow: /index.html
+
+# Block all directories
+Disallow: /js/
+Disallow: /css/
+Disallow: /images/
+Disallow: /*
+
+# Prevent indexing
+Noindex: /*
+Noarchive: /*
+Nosnippet: /*
