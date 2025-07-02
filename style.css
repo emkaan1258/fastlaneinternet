@@ -1543,9 +1543,11 @@ Blocks Styles
   background: linear-gradient(to top, #1344a4, #011054); }
 
 .slider--one .slider_fixed_height {
-  height: 900px; }
+  height: auto; }
 .slider--one .slide {
-  padding-top: 100px; }
+  padding-top: 80px;
+  padding-bottom: 80px;
+ }
 
 .slider--2 .slider_fixed_height {
   height: 900px; }
