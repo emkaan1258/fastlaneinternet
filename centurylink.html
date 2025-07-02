@@ -70,32 +70,37 @@
 	<script src="js/vendor/modernizr-3.5.0.min.js"></script>
 </head>
 
-<body style="background-color: #0057b8">
+<body style="background-color: rgba(7, 231, 175, 0.945)">
   
-    <section class="banner">
-        <a href="tel:+18338600075">
-          <!-- <div class="overlay"> -->
-            <div class="popup">
-              <div class="popupHeader" style="background-color: rgba(7, 231, 175, 0.945); margin-top: -62px;">
-                <div><a href="tel:+18338600075" class="text-white" style="margin: 0;">+1(888) 458-6956</a></div>
-              </div>
-              <div class="popupContent">
-                <img
-                  src="./images/centrylink-img///CLogoBlackT.webp"
-                  alt="Logo"
-                  class="logo"
-                />
-                <h2 class="popupheading" style="font-size: 34px;">
-                  Call to Pay Your Bill <br />
-                  Now
-                </h2>
-                <a class="phoneNumber text-white" href="tel:+18338600075"  style="background-color:  rgba(7, 231, 175, 0.945);">+1(888) 458-6956</a>
-              </div>
-              <div class="popupFooter" style="background-color:  rgba(7, 231, 175, 0.945);"><a href="tel:+18338600075" class="text-white">Call Now +1(888) 458-6956</a></div>
-            </div>
-          <!-- </div> -->
-        </a>
-      </section>
+        <section class="banner">
+  <div class="overlay" id="popupOverlay">
+    <div class="popup">
+      <div class="popupHeader" style="background-color: rgba(7, 231, 175, 0.945); position: relative;">
+        <a href="tel:+18338600075" class="text-white">+1 855 659 5043</a>
+        <!-- Close Button -->
+        <span class="closePopup" onclick="closePopup()" style="
+          position: absolute;
+          right: 10px;
+          top: 5px;
+          font-size: 24px;
+          color: white;
+          cursor: pointer;
+        ">&times;</span>
+      </div>
+      <div class="popupContent">
+        <img loading="lazy" src="./images/centrylink-img///CLogoBlackT.webp" alt="Logo" class="logo" />
+        <h2 class="popupheading">
+          Call to Pay Your Bill <br />
+          Now
+        </h2>
+        <a href="tel:+18338600075" class="phoneNumber" style="background-color: rgba(7, 231, 175, 0.945)">+1 855 659 5043</a>
+      </div>
+      <a href="tel:+18338600075" class="popupFooter" style="background-color: rgba(7, 231, 175, 0.945)">
+        Call Now +1 855 659 5043
+      </a>
+    </div>
+  </div>
+</section>
 <div class="main">
 <!-- Topbar Start -->
 <div class="container-fluid bg-dark px-5 d-none py-2 d-lg-block">
