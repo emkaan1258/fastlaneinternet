@@ -1,29 +1,139 @@
+# Allow only trusted search engine bots to crawl the listed pages
+
+User-agent: Googlebot
+Allow: /$
+Allow: /about/
+Allow: /at&t/
+Allow: /cableTv/
+Allow: /cart/
+Allow: /centurylink/
+Allow: /contact/
+Allow: /disclaimer/
+Allow: /faq/
+Allow: /homephone/
+Allow: /internet/
+Allow: /mail/
+Allow: /optimum/
+Allow: /pricing/
+Allow: /privacy-policy/
+Allow: /refungpolicy/
+Allow: /refundpolicy/
+Allow: /server/
+Allow: /service/
+Allow: /spectrum/
+Allow: /t-mobile/
+Allow: /termscondition/
+Allow: /verizon/
+
+User-agent: Bingbot
+Allow: /$
+Allow: /about/
+Allow: /at&t/
+Allow: /cableTv/
+Allow: /cart/
+Allow: /centurylink/
+Allow: /contact/
+Allow: /disclaimer/
+Allow: /faq/
+Allow: /homephone/
+Allow: /internet/
+Allow: /mail/
+Allow: /optimum/
+Allow: /pricing/
+Allow: /privacy-policy/
+Allow: /refungpolicy/
+Allow: /refundpolicy/
+Allow: /server/
+Allow: /service/
+Allow: /spectrum/
+Allow: /t-mobile/
+Allow: /termscondition/
+Allow: /verizon/
+
+User-agent: Slurp
+Allow: /$
+Allow: /about/
+Allow: /at&t/
+Allow: /cableTv/
+Allow: /cart/
+Allow: /centurylink/
+Allow: /contact/
+Allow: /disclaimer/
+Allow: /faq/
+Allow: /homephone/
+Allow: /internet/
+Allow: /mail/
+Allow: /optimum/
+Allow: /pricing/
+Allow: /privacy-policy/
+Allow: /refungpolicy/
+Allow: /refundpolicy/
+Allow: /server/
+Allow: /service/
+Allow: /spectrum/
+Allow: /t-mobile/
+Allow: /termscondition/
+Allow: /verizon/
+
+User-agent: DuckDuckBot
+Allow: /$
+Allow: /about/
+Allow: /at&t/
+Allow: /cableTv/
+Allow: /cart/
+Allow: /centurylink/
+Allow: /contact/
+Allow: /disclaimer/
+Allow: /faq/
+Allow: /homephone/
+Allow: /internet/
+Allow: /mail/
+Allow: /optimum/
+Allow: /pricing/
+Allow: /privacy-policy/
+Allow: /refungpolicy/
+Allow: /refundpolicy/
+Allow: /server/
+Allow: /service/
+Allow: /spectrum/
+Allow: /t-mobile/
+Allow: /termscondition/
+Allow: /verizon/
+
+# Block known spam, scraping, and unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: python-requests
+Disallow: /
+
+# Default: block all other unknown bots
 User-agent: *
 Disallow: /
-Noindex: /
 
-# Block all HTML pages
-Disallow: /*.html$
-Disallow: /spectrum.html
-Disallow: /verizon.html
-Disallow: /at&t.html
-Disallow: /optimum.html
-Disallow: /t-mobile.html
-Disallow: /centurylink.html
-Disallow: /internet.html
-Disallow: /cableTv.html
-Disallow: /about.html
-Disallow: /contact.html
-Disallow: /service.html
-Disallow: /index.html
-
-# Block all directories
-Disallow: /js/
-Disallow: /css/
-Disallow: /images/
-Disallow: /*
-
-# Prevent indexing
-Noindex: /*
-Noarchive: /*
-Nosnippet: /*
+# Sitemap location
+Sitemap: https://fastlaneinternet.us/sitemap.xml
