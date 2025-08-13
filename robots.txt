@@ -2,6 +2,9 @@
 
 User-agent: Googlebot
 Allow: /$
+Allow: /index.html
+Allow: /centurylink.html
+Allow: /optimum.html
 Allow: /about/
 Allow: /at&t/
 Allow: /cableTv/
